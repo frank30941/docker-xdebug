@@ -1,0 +1,15 @@
+{
+  "name": "xdebug",
+  "version": "1.0.0",
+  "dependencies": {},
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": { 
+  },
+  "repository": {},
+  "author": ""
+}

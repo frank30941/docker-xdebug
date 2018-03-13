@@ -1,0 +1,23 @@
+{
+  "name": "xdebug-Ankat",
+  "version": "0.0.1",
+  "authors": [
+    "frank30941 <frank30941@gmail.com>"
+  ],
+  "description": "Base technology for the Ankat",
+  "main": "index.php",
+  "keywords": [
+    "Ankat",
+    "mvc",
+    "php framework"
+  ],
+  "license": "Proprietary",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "node_modules"
+  ],
+  "devDependencies": {},
+  "dependencies": { },
+  "resolutions": { }
+}

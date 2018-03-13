@@ -1,0 +1,56 @@
+version: '3.1'
+
+services:
+
+  # Application container
+  xdebug:
+    image: php7-xdebug
+    build:
+      context: .
+      dockerfile: ./php7-xdebug/Dockerfile
+    env_file: ./php7-xdebug/env
+    ports:
+      - "80:80"
+    expose:
+      - "9000"
+    volumes:
+      - ./html:/var/www/html:rw
+      - modules_node:/var/www/html/public/node_modules
+      - modules_composer:/var/www/html/public/vendor
+      - modules_bower:/var/www/html/public/js/bower_component
+    depends_on:
+      - mariadb
+
+  # Database container incl. init script for local development
+  mariadb:
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: passwd
+      MYSQL_USER: "test"
+      MYSQL_PASSWORD: "passwd"
+#      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOST=mariadb
+#      - PMA_USER=test
+#      - PMA_PASSWORD=passwd
+    depends_on:
+      - mariadb
+    ports:
+      - 8080:80
+    volumes:
+      - "./phpmyadmin/sessions:/sessions"
+
+volumes:
+  mariadb-data:
+  modules_node:
+  modules_composer:
+  modules_bower:
