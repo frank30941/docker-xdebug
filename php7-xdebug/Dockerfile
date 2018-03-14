@@ -12,37 +12,37 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Install Ubuntu packages
 RUN apt-get install -y \
-        build-essential \
-        curl \
-        git \
-        libcurl4-openssl-dev \
-        libicu-dev \
-        libmcrypt-dev \
-        libmysqlclient-dev \
-        libpng-dev \
-        mysql-client \
-        ruby-full \
-        software-properties-common \
-        vim \
-        zip
+    build-essential \
+    curl \
+    git \
+    libcurl4-openssl-dev \
+    libicu-dev \
+    libmcrypt-dev \
+    libmysqlclient-dev \
+    libpng-dev \
+    mysql-client \
+    ruby-full \
+    software-properties-common \
+    vim \
+    zip
 
 # Install PHP and NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && apt-get install -y \
-        nodejs \
+    nodejs \
     && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
     && docker-php-ext-install \
-      curl \
-      #fpm \
-      gd \
-      intl \
-      json \
-      mbstring \
-      mcrypt \
-      mysqli \
-      pdo_mysql \
-      zip \
-      opcache \
+    curl \
+    #fpm \
+    gd \
+    intl \
+    json \
+    mbstring \
+    mcrypt \
+    mysqli \
+    pdo_mysql \
+    zip \
+    opcache \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && npm install -g bower \
     && mkdir /run/php \
@@ -52,19 +52,19 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Dev dependecies
-RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.5.5.tgz' -o xdebug.tar.gz \
-        && mkdir -p xdebug \
-        && tar -xf xdebug.tar.gz -C xdebug --strip-components=1 \
-        && rm xdebug.tar.gz \
-        && ( \
-        cd xdebug \
-        && phpize \
-        && ./configure --enable-xdebug \
-        && make -j$(nproc) \
-        && make install \
-        ) \
-        && rm -r xdebug \
-        && docker-php-ext-enable xdebug
+RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.6.0.tgz' -o xdebug.tar.gz \
+    && mkdir -p xdebug \
+    && tar -xf xdebug.tar.gz -C xdebug --strip-components=1 \
+    && rm xdebug.tar.gz \
+    && ( \
+    cd xdebug \
+    && phpize \
+    && ./configure --enable-xdebug \
+    && make -j$(nproc) \
+    && make install \
+    ) \
+    && rm -r xdebug \
+    && docker-php-ext-enable xdebug
 COPY ./php7-xdebug/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 RUN su -c "gem install sass"
 
