@@ -48,7 +48,7 @@ docker-compose up -d
 - 建立完成並且容器開始運作後
 - 開啟 VSCODE 的 debug 功能
 - 點擊左上邊的綠色箭頭，開始監聽~
-- 在開啟網頁 [http://localhost/](http://localhost/ "http://localhost/")
+- 開啟網頁 [http://localhost/](http://localhost/ "http://localhost/")
 # 開始除蟲啦~~~
 ## 參考
 - [https://github.com/felixfbecker/vscode-php-debug](https://github.com/felixfbecker/vscode-php-debug "https://github.com/felixfbecker/vscode-php-debug") 
