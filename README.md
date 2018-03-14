@@ -42,7 +42,7 @@ xdebug.remote_host=docker.for.win.localhost
 cd /***/***/***/docker-xdebug/
 docker-compose up -d
 ```
-第一次會先建立有 xdebug 的 image，會花很多時間，這是時候就來沖杯咖啡吧~
+第一次會先建立有 xdebug 的 image，會花很多時間，這時候就來沖杯咖啡吧~
 ### 步驟4
 1. 建立完成並且容器開始運作後
 2. 開啟 VSCODE 的 debug 功能
