@@ -39,6 +39,7 @@ xdebug.remote_host=docker.for.win.localhost
 - Mac: Terminal
 #### 指令:
 ```shell
+cd /***/***/***/docker-xdebug/
 docker-compose up -d
 ```
 第一次會先建立有 xdebug 的 image，會花很多時間，這是時候就來沖杯咖啡吧~
