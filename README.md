@@ -11,14 +11,14 @@
 
 ## 設定:
 ### 步驟1
-- 滑鼠右鍵工作列右邊的小圖案 docker->settings->Shares Drives
-- 選擇給 docker volumes 存放的硬碟
+1. 滑鼠右鍵工作列右邊的小圖案 docker->settings->Shares Drives
+2. 選擇給 docker volumes 存放的硬碟
 ### 步驟2
-- 將 docker-xdebug clone 到本機端，以VSCODE開啟 docker-xdebug 目錄資料夾
-- 在 ./docker-xdebug/html/ 底下可放你入的專案，或著只是測試檔案都可
-- 點開編輯 ./docker-xdebug/php7-xdebug/xdebug.ini
-- **重點在這!!** **重點在這!!** **重點在這!!** **很重要所以說三次!!**
-- 請依你的本機系統來選擇，預設是 Windows
+1. 將 docker-xdebug clone 到本機端，以VSCODE開啟 docker-xdebug 目錄資料夾
+2. 在 ./docker-xdebug/html/ 底下可放你入的專案，或著只是測試檔案都可
+3. 點開編輯 ./docker-xdebug/php7-xdebug/xdebug.ini
+4. **重點在這!!** **重點在這!!** **重點在這!!** **很重要所以說三次!!**
+5. 請依你的本機系統來選擇，預設是 Windows
 ```ini
 zend_extension=xdebug.so
 xdebug.remote_enable=1
@@ -34,20 +34,20 @@ xdebug.remote_host=docker.for.win.localhost
 #xdebug.remote_host=docker.for.mac.localhost
 ```
 ### 步驟3
-- 開啟終端機
--- Windows: cmd or PowerShell
--- Mac: Terminal
+1. 開啟終端機
+- Windows: cmd or PowerShell
+- Mac: Terminal
 #### 指令:
 ```shell
 docker-compose up -d
 ```
 第一次會先建立有 xdebug 的 image，會花很多時間，這是時候就來沖杯咖啡吧~
 ### 步驟4
-- 建立完成並且容器開始運作後
-- 開啟 VSCODE 的 debug 功能
-- 點擊左上邊的綠色箭頭，開始監聽~
-- 開啟網頁 [http://localhost/](http://localhost/ "http://localhost/")
-# 開始除蟲啦~~~
+1. 建立完成並且容器開始運作後
+2. 開啟 VSCODE 的 debug 功能
+3. 點擊左上邊的綠色箭頭，開始監聽~
+4. 開啟網頁 [http://localhost/](http://localhost/ "http://localhost/")
+# 5. 開始除蟲啦~~~
 ## 參考
 - [https://github.com/felixfbecker/vscode-php-debug](https://github.com/felixfbecker/vscode-php-debug "https://github.com/felixfbecker/vscode-php-debug") 
 - [https://medium.com/@sbuckpesch/setup-xdebug-on-phpstorm-and-visual-studio-code-using-docker-on-windows-hyper-v-9c385dd732c9](https://medium.com/@sbuckpesch/setup-xdebug-on-phpstorm-and-visual-studio-code-using-docker-on-windows-hyper-v-9c385dd732c9 "https://medium.com/@sbuckpesch/setup-xdebug-on-phpstorm-and-visual-studio-code-using-docker-on-windows-hyper-v-9c385dd732c9") 
