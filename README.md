@@ -1,5 +1,5 @@
 # docker-xdebug
-##### Keyword visual studio code VSCODE php docker xdebug
+##### Keyword: [ visual studio code ] [ VSCODE ] [ php ]  docker ] [ xdebug ]
 
 ## 主題: 使用 docker 跑 Xdebug 容器，再以 VSCODE 偵錯開發
 
