@@ -17,7 +17,8 @@
 - 選擇給 docker volumes 存放的硬碟
 ### 步驟2
 - 將docker-xdebug clone 到本機端，以VSCODE開啟 docker-xdebug 目錄資料夾
-- 點開編輯 docker-xdebug\php7-xdebug\xdebug.ini
+- 在 ./docker-xdebug/html/ 底下可放你入的專案，或著只是測試檔案都可
+- 點開編輯 ./docker-xdebug/php7-xdebug/xdebug.ini
 - **重點在這!!** **重點在這!!** **重點在這!!** **很重要所以說三次!!**
 - 請依你的本機系統來選擇，預設是 Windows
 ```ini
