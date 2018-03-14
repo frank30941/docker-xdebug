@@ -18,6 +18,9 @@
     "node_modules"
   ],
   "devDependencies": {},
-  "dependencies": { },
+  "dependencies": { 
+    "jquery": "~1.11.1",
+    "bootstrap": "~3.0.0"
+  },
   "resolutions": { }
 }
