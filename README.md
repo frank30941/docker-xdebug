@@ -2,7 +2,7 @@
 # Keyword visual studio code VSCODE php docker xdebug
 
 ## 主題:
-### 使用 docker 跑 Xdebug 容器，在以 VSCODE 偵錯開發
+### 使用 docker 跑 Xdebug 容器，再以 VSCODE 偵錯開發
 
 ## 準備工具:
 -docker: >=17.09.1
