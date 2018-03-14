@@ -6,15 +6,15 @@
 ## 準備工具:
 - docker: >=17.09.1
 - docker images: php:7.1-apache、mariadb:latest、phpmyadmin/phpmyadmin:latest
-- VSCODE: 1.21.0 (筆者當前使用的)，載入PHP及docker相關插件(主要是PHP Debug)
-- OS:Windows10(Hyper-V) or Mac 都可
+- VSCODE: 1.21.0 (筆者當前使用的)，載入 PHP 及 docker 相關插件(主要是 PHP Debug)
+- OS: Windows10( Hyper-V ) or Mac 都可
 
 ## 設定:
 ### 步驟1
 - 滑鼠右鍵工作列右邊的小圖案 docker->settings->Shares Drives
 - 選擇給 docker volumes 存放的硬碟
 ### 步驟2
-- 將docker-xdebug clone 到本機端，以VSCODE開啟 docker-xdebug 目錄資料夾
+- 將 docker-xdebug clone 到本機端，以VSCODE開啟 docker-xdebug 目錄資料夾
 - 在 ./docker-xdebug/html/ 底下可放你入的專案，或著只是測試檔案都可
 - 點開編輯 ./docker-xdebug/php7-xdebug/xdebug.ini
 - **重點在這!!** **重點在這!!** **重點在這!!** **很重要所以說三次!!**
