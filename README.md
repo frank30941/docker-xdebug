@@ -7,7 +7,7 @@
 ## 準備工具:
 - docker: >=17.09.1
 - docker images:
-- php:7.1-apache、marisdb:latest、phpmyadmin/phpmyadmin:latest
+-- php:7.1-apache、marisdb:latest、phpmyadmin/phpmyadmin:latest
 - VSCODE: 1.21.0 (筆者當前使用的)，載入PHP及docker相關插件(主要是PHP Debug)
 - OS:Windows10(Hyper-V) or Mac 都可
 
