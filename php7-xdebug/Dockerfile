@@ -79,9 +79,3 @@ RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 WORKDIR /var/www/html
 COPY composer.json package.json bower.json ./
 RUN composer install && npm install --quiet && bower install --allow-root
-
-#COPY start-container /usr/local/bin/start-container
-#RUN chmod +x usr/local/bin/start-container
-
-#EXPOSE 80
-#CMD ["start-container"]
