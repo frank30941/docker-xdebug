@@ -1,15 +1,11 @@
 {
-  "name": "xdebug",
+  "name": "ankat",
   "version": "1.0.0",
-  "dependencies": {},
   "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "test"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {},
-  "scripts": { 
-  },
-  "repository": {},
-  "author": ""
+  "author": "ankat",
+  "license": "MIT"
 }

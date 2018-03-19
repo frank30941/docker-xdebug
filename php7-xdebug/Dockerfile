@@ -77,5 +77,5 @@ RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 
 # Install package dependencies
 WORKDIR /var/www/html
-COPY composer.json package.json bower.json ./
-RUN composer install && npm install --quiet && bower install --allow-root
+COPY composer.json package.json bower.json .bowerrc ./
+RUN composer install && npm config set prefix "/var/www/html/public/node_modules" && npm install --quiet && bower install --allow-root
